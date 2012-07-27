@@ -128,7 +128,7 @@ class UserManager extends BaseUserManager
         }
         // check if returned document is proxy and initialize the minimum identifier if needed
         if ($document instanceof Proxy) {
-            $classMetadata->setIdentifierValue($document, $document->__identifier);
+            $classMetadata->setIdentifierValue($document, $document->__identifier__);
         }
         // check if document has the same identifier as the current one
         if ($classMetadata->getIdentifierValue($document) === $classMetadata->getIdentifierValue($value)) {
